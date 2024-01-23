@@ -26,7 +26,7 @@ def test_get_all_pets_with_valid_key(filter=''):
 
 
 
-def test_post_new_friends(name='Patrik', animal_type='star', age='2', pet_photo='images/Patrik.jpg'):
+def test_post_new_friends(name='Patrik', animal_type='star', age='2', pet_photo='images/pauk.jpe'):
     """Проверяем что можно добавить питомца с корректными данными (по кличке)"""
 
     # Получаем полный путь изображения питомца и сохраняем в переменную pet_photo
@@ -39,7 +39,7 @@ def test_post_new_friends(name='Patrik', animal_type='star', age='2', pet_photo=
     assert status == 200
     assert result['name'] == name
 
-def test_post_new_friends_2(name='Patrik', animal_type='star', age='2', pet_photo='images/Patrik.jpg'):
+def test_post_new_friends_2(name='Patrik', animal_type='star', age='2', pet_photo='images/pauk.jpe'):
     """Проверяем что можно добавить питомца с корректными данными (по типу)"""
     pet_photo = os.path.join(os.path.dirname(__file__), pet_photo)
     _, auth_key = pf.get_api_key(valid_email, valid_password)
@@ -47,7 +47,7 @@ def test_post_new_friends_2(name='Patrik', animal_type='star', age='2', pet_phot
     assert status == 200
     assert result['animal_type'] == animal_type
 
-def test_post_new_friends_3(name='Patrik', animal_type='star', age='2', pet_photo='images/Patrik.jpg'):
+def test_post_new_friends_3(name='Patrik', animal_type='star', age='2', pet_photo='images/pauk.jpe'):
     """Проверяем что можно добавить питомца с корректными данными (по возрасту)"""
     pet_photo = os.path.join(os.path.dirname(__file__), pet_photo)
     _, auth_key = pf.get_api_key(valid_email, valid_password)
